@@ -1,11 +1,6 @@
 body {
-    background-color: black;
-}
-
-#dogpix {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
+    background: url(blade-blooming-blossom-5865.jpg);
+    background-size: cover;
 }
 
 button {
@@ -26,6 +21,12 @@ button {
     left: 50px;
 }
 
+#dogpix {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
 span {
     width: 30%;
     text-align: center;
@@ -38,17 +39,30 @@ img {
     border-color: white;
     border-style: solid;
     border-radius: 10%;
+    -webkit-box-shadow: 10px 10px 7px 0px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 10px 10px 7px 0px rgba(0, 0, 0, 1);
+    box-shadow: 10px 10px 7px 0px rgba(0, 0, 0, 1);
+    /*https://www.cssmatic.com/box-shadow*/
 }
 
 .sad {
     font-size: 80px;
+    width: 25%;
     color: grey;
+    opacity: 0.75;
     text-align: center;
-    height: 300px;
+    height: 200px;
+    line-height: 200px;
     margin: 5px;
-    padding: 0;
     border-width: 15px;
-    border-color: white;
     border-style: solid;
     border-radius: 10%;
+}
+
+footer {
+    position: fixed;
+    vertical-align: bottom;
+    bottom: 0px;
+    right: 0px;
+    font-family: monospace;
 }

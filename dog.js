@@ -29,8 +29,17 @@ async function setRandomDogs() {
 function byeDog() {
     const notCuteIdNo = parseInt(this.getAttribute('id'));
     const notCuteDog = document.querySelector(`#dog${notCuteIdNo}`);
-    notCuteDog.innerHTML = '<br>🐶:😞<br>';
+    notCuteDog.innerHTML = '🐶:😞';
     notCuteDog.setAttribute('class', 'sad');
+    notCuteDog.style.backgroundColor = randomColor();
+    notCuteDog.style.borderColor = randomColor();
+}
+
+function randomColor() {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    return `rgb(${r},${g},${b})`;
 }
 
 document.addEventListener('DOMContentLoaded', () => {
