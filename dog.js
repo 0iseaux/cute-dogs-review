@@ -44,6 +44,7 @@ function loveDog() {
     const cuteDog = document.querySelector(`#dog${cuteIdNo}`);
     cuteDog.children[0].style.borderColor = randomColor();
     document.getElementById(`${cuteIdNo}cute`).removeEventListener('click', loveDog);
+    document.getElementById(`${cuteIdNo}notCute`).removeEventListener('click', byeDog);
 }
 
 function byeDog() {
