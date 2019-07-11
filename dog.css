@@ -1,7 +1,16 @@
 body {
     background: url(blade-blooming-blossom-5865.jpg);
-    background-size: cover;
+    background-size: contain;
     font-family: sans-serif;
+}
+
+h1 {
+    font-family: fantasy;
+    text-align: center;
+    font-weight: bold;
+    color: rgb(207, 252, 207);
+    text-decoration: underline wavy white;
+    text-shadow: 2px 2px rgb(36, 36, 36);
 }
 
 button {
