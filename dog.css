@@ -1,6 +1,7 @@
 body {
     background: url(blade-blooming-blossom-5865.jpg);
     background-size: cover;
+    font-family: sans-serif;
 }
 
 button {
@@ -13,10 +14,26 @@ button {
 }
 
 #oneMore {
-    display: block;
+    display: inline-block;
     position: fixed;
     top: 10px;
     left: 10px;
+}
+
+.count {
+    display: inline-block;
+    position: fixed;
+    line-height: 10px;
+    right: 5px;
+    font-size: 15px;
+}
+
+#dogsCount {
+    top: 10px;
+}
+
+#cuteDogsCount {
+    top: 25px;
 }
 
 .notCute {

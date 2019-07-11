@@ -3,6 +3,7 @@
 
 const dogPix = document.querySelector('#dogpix');
 let dogCount = 0;
+let cuteDogCount = 0;
 
 async function getRandomDogs() {
     const randomDog = fetch('https://dog.ceo/api/breeds/image/random');
@@ -14,6 +15,8 @@ async function getRandomDogs() {
 async function setRandomDogs() {
     const dogImg = await getRandomDogs();
     dogCount++;
+
+    dogsCount.innerHTML = `dogs: ${dogCount}`;
     const dogSpan = document.createElement('span');
     dogPix.appendChild(dogSpan);
     dogSpan.setAttribute('id', `dog${dogCount}`);
@@ -35,9 +38,12 @@ async function setRandomDogs() {
 }
 
 function loveDog() {
+    cuteDogCount++;
+    document.querySelector('#cuteDogsCount').innerHTML = `cute dog(s): ${cuteDogCount}`;
     const cuteIdNo = parseInt(this.getAttribute('id'));
     const cuteDog = document.querySelector(`#dog${cuteIdNo}`);
     cuteDog.children[0].style.borderColor = randomColor();
+    document.getElementById(`${cuteIdNo}cute`).removeEventListener('click', loveDog);
 }
 
 function byeDog() {
@@ -58,10 +64,22 @@ function randomColor() {
 
 document.addEventListener('DOMContentLoaded', () => {
     const container = document.querySelector('#container');
+
     const oneMore = document.createElement('button');
-    oneMore.innerText = 'One more 🐶!';
+    oneMore.innerText = '+🐶!';
     oneMore.setAttribute('id', 'oneMore');
     container.appendChild(oneMore);
+
+    const dogsCount = document.createElement('div');
+    dogsCount.setAttribute('id', 'dogsCount');
+    dogsCount.setAttribute('class', 'count');
+    container.appendChild(dogsCount);
+
+    const cuteDogsCount = document.createElement('div');
+    cuteDogsCount.setAttribute('id', 'cuteDogsCount');
+    cuteDogsCount.setAttribute('class', 'count');
+    container.appendChild(cuteDogsCount);
+
     oneMore.addEventListener('click', () => {
         setRandomDogs();
     });
