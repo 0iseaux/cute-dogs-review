@@ -28,11 +28,12 @@ button {
 
 span {
     width: 30%;
+    text-align: center;
 }
 
 img {
     width: 80%;
-    margin: 1px;
+    margin: 5px;
     border-width: 15px;
     border-color: white;
     border-style: solid;
@@ -40,5 +41,14 @@ img {
 }
 
 .sad {
-    font-size: 180px;
+    font-size: 80px;
+    color: grey;
+    text-align: center;
+    height: 300px;
+    margin: 5px;
+    padding: 0;
+    border-width: 15px;
+    border-color: white;
+    border-style: solid;
+    border-radius: 10%;
 }

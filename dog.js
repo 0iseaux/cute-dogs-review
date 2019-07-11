@@ -1,9 +1,8 @@
 //https://www.npmjs.com/package/serve
-//https://www.npmjs.com/package/random-puppy not working?
 //https://dog.ceo/dog-api/documentation/random
 
-let allDogs = [];
 const dogPix = document.querySelector('#dogpix');
+let dogCount = 0;
 
 async function getRandomDogs() {
     const randomDog = fetch('https://dog.ceo/api/breeds/image/random');
@@ -13,43 +12,25 @@ async function getRandomDogs() {
 }
 
 async function setRandomDogs() {
-    allDogs.push(await getRandomDogs());
-    updateDOM();
+    const dogImg = await getRandomDogs();
+    dogCount++;
+    const dogSpan = document.createElement('span');
+    dogPix.appendChild(dogSpan);
+    dogSpan.setAttribute('id', `dog${dogCount}`);
+    dogSpan.innerHTML = `<img src=\"${dogImg}\">`;
+    const notCute = document.createElement('button');
+    notCute.setAttribute('class', 'notCute');
+    notCute.setAttribute('id', `${dogCount}notCute`);
+    notCute.innerText = 'Not Cute 😓';
+    dogSpan.appendChild(notCute);
+    notCute.addEventListener('click', byeDog);
 }
 
-function updateDOM() {
-    dogPix.innerHTML = '';
-    //const dogSpan = document.createElement('div');
-
-    allDogs.forEach((dogImg, index) => {
-        const dogSpan = document.createElement('span');
-        dogPix.appendChild(dogSpan);
-        dogSpan.setAttribute('id', `dog${index}`);
-        dogSpan.innerHTML = `<img src=\"${dogImg}\">`;
-        //console.log(index); index works fine here
-        const notCute = document.createElement('button');
-        notCute.setAttribute('class', 'notCute');
-        notCute.innerText = 'Not Cute 😓';
-        dogSpan.appendChild(notCute);
-        notCute.addEventListener('click', (dogImg, index) => {
-            //seems dogImg is always the first one...
-            byeDog(dogImg, index);
-        });
-    });
-}
-
-function byeDog(dogImg, index) {
-    //weird removal pattern..............
-    //console.log(allDogs[0]); this works
-    //console.log(allDogs[index]); // undefined
-    //console.log(index); // ?MouseEvent {isTrusted: true, screenX: 262, screenY: 633, clientX: 231, clientY: 525, …}??
-    //document.querySelector(`#dog${index}`).innerHTML = `<span class=\"sad\>🐶:😞</span>`;
-    const ind = allDogs.indexOf(dogImg);
-    //console.log(ind);//WHY ALWAYS -1???
-    //document.querySelector(`#dog${index + 1}`).innerHTML = "<span class='sad'>🐶:😞</span>"; //????? trying to get around the 'index' issue
-    //// allDogs.splice(ind, 1); // index =??
-    allDogs.splice(ind, 1); // BUT SPLICE works here with 'index'
-    updateDOM();
+function byeDog() {
+    const notCuteIdNo = parseInt(this.getAttribute('id'));
+    const notCuteDog = document.querySelector(`#dog${notCuteIdNo}`);
+    notCuteDog.innerHTML = '<br>🐶:😞<br>';
+    notCuteDog.setAttribute('class', 'sad');
 }
 
 document.addEventListener('DOMContentLoaded', () => {
