@@ -36,9 +36,16 @@ button {
     top: 25px;
 }
 
+.cute {
+    position: relative;
+    width: 20%;
+    font-size: 15px;
+}
+
 .notCute {
     position: relative;
-    left: 50px;
+    left: 10%;
+    font-size: 15px;
 }
 
 #dogpix {
@@ -74,6 +81,10 @@ img {
     margin: 8px;
     border: 15px white solid;
     border-radius: 10%;
+    -webkit-box-shadow: inset 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    /*https://www.cssmatic.com/box-shadow*/
 }
 
 footer {
