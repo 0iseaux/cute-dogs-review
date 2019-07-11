@@ -1,0 +1,44 @@
+body {
+    background-color: black;
+}
+
+#dogpix {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+button {
+    font-size: 20px;
+    padding: 3px;
+    border-radius: 30%;
+}
+
+#oneMore {
+    display: block;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+
+.notCute {
+    position: relative;
+    left: 50px;
+}
+
+span {
+    width: 30%;
+}
+
+img {
+    width: 80%;
+    margin: 1px;
+    border-width: 15px;
+    border-color: white;
+    border-style: solid;
+    border-radius: 10%;
+}
+
+.sad {
+    font-size: 180px;
+}
