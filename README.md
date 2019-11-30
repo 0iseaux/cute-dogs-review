@@ -1,5 +1,7 @@
 # Cute Dog Collector (single-page app)
 
+[View the App](./dog.html)
+
 ## How it works
 
 Press the button on the top left to generate a new random dog (photo).
