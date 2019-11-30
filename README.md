@@ -1,6 +1,6 @@
-# Cute Dog Collector (single-page app)
+# Cute Dog Collector SPA (Single-page Application)
 
-[View the App](./dog.html)
+[Try the App](./dog.html)
 
 ## How it works
 
