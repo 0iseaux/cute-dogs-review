@@ -6,8 +6,10 @@
 
 Press the button on the top left to generate a new random dog (photo).
 Each dog (photo) can be rated as cute or not cute, which will trigger some UI changes (such as random border colours).
-Each dog (photo) can only be rated once -- **and you cannot undo** without refreshing the page (and getting new random pictures).
+Each dog (photo) can only be rated once -- **and you cannot undo** without refreshing the page.
 A simple counter on the top left keeps track of the number of dogs viewed and that marked as 'cute'.
+
+The current version has no backend and does not support photo-saving, but it may come as a feature in future.
 
 ## Development Notes
 
