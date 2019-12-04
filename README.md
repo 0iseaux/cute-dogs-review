@@ -1,4 +1,4 @@
-# Cute Dog Collector SPA (Single-page Application)
+# Cute Dogs Reviewer SPA (Single-page Application)
 
 [Try the App](https://0iseaux.github.io/cute-dogs-review/)
 
