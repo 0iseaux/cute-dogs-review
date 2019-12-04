@@ -1,6 +1,6 @@
 # Cute Dog Collector SPA (Single-page Application)
 
-[Try the App](./dog.html)
+[Try the App](https://0iseaux.github.io/cute-dogs-review/)
 
 ## How it works
 
